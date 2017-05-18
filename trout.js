@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+var x = 0;
 
 class Slap extends commando.Command {
     //creates command trigger
@@ -19,8 +20,10 @@ class Slap extends commando.Command {
     //what runs when the command is executed
     async run(message, args) {
         const { victim } = args;
-        message.reply("slaps " + args[0] + " with the holiest of mackarels");
-        //`\u180E${victim}`     <= working slap command
+        if(x <= 10){
+            message.reply("slaps " + `\u180E${victim}` + " with the holiest of mackarels");
+        }
+        x ++;
     }
 }
 
