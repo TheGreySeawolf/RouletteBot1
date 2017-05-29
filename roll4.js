@@ -35,13 +35,13 @@ class Roll extends commando.Command {
         const { person1, person2, person3, person4} = args;
         var number = Math.floor(Math.random() * 4) + 1;
         if(number === 1) {
-            message.reply(person1);
+            message.say(person1);
         }else if(number === 2){
-            message.reply(person2)
+            message.say(person2)
         }else if(number === 3){
-            message.reply(person3)
+            message.say(person3)
         }else if(number === 4){
-            message.reply(person4)
+            message.say(person4)
         }
     }
 }

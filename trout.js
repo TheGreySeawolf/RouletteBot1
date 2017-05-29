@@ -21,7 +21,7 @@ class Slap extends commando.Command {
     async run(message, args) {
         const { victim } = args;
         if(x <= 10){
-            message.reply("slaps " + `\u180E${victim}` + " with the holiest of mackarels");
+            message.say(message.author + " slaps " + `\u180E${victim}` + " with the holiest of mackarels");
         }
         x ++;
     }

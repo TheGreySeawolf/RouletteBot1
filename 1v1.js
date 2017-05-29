@@ -17,6 +17,8 @@ class Fight extends commando.Command {
 
     async run(message, args) {
 
+        var replyChannel = message.channel;
+        var sender = message.author;
         var game = " ";
         var num =  Math.floor(Math.random() * 5) + 1;
         if(num == 1) {
@@ -32,7 +34,7 @@ class Fight extends commando.Command {
         }
         
         const { opponent } = args;
-        message.reply("challenges " + `\u180E${opponent}` + " to a 1 v 1. The game of choice is: " + game);
+        replyChannel.sendMessage(sender + " challenges " + `\u180E${opponent}` + " to a 1 v 1. The game of choice is: " + game);
     }
 } 
 
